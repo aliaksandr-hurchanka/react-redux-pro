@@ -1,4 +1,7 @@
 import React, { PropTypes, Component } from 'react'
+import * as fieldActions from '../actions/FieldActions'
+import Field from './Field'
+import Result from './Result'
 
 export default class Page extends Component {
     onYearBtnClick(e) {
@@ -7,6 +10,8 @@ export default class Page extends Component {
     
     render() {
         const { year, photos, fetching } = this.props
+        const { addString } = this.props.fieldActions
+        
         return <div className='ib page'>
             <p>
                 <button className='btn' onClick={::this.onYearBtnClick}>2016</button>
@@ -21,12 +26,9 @@ export default class Page extends Component {
                     :
                     <p>У тебя {photos.length} фото.</p>
                 }
+        
+            <Field addString={addString} />
+            <Result />
         </div>
     }
-}
-
-Page.propTypes = {
-    year: PropTypes.number.isRequired,
-    photos: PropTypes.array.isRequired,
-    getPhotos: PropTypes.func.isRequired
 }

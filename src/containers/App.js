@@ -6,28 +6,29 @@ import Page from '../components/Page'
 import * as pageActions from '../actions/PageActions'
 
 class App extends Component {
-  render() {
-    const { user, page } = this.props
-    const { getPhotos } = this.props.pageActions
+    render() {
+        const { user, page } = this.props
+        const { getPhotos } = this.props.pageActions
 
-    return <div className='row'>
-      <User name={user.name} />
-      <Page photos={page.photos} year={page.year} getPhotos={getPhotos} fetching={page.fetching} />
-    </div>
-  }
+        return <div className='row'>
+            <User name={user.name} />
+            <Page photos={page.photos} year={page.year} getPhotos={getPhotos} fetching={page.fetching} />
+        </div>
+    }
 }
 
 function mapStateToProps(state) {
-  return {
-    user: state.user,
-    page: state.page
-  }
+    return {
+        user: state.user,
+        page: state.page,
+        field: state.field
+    }
 }
 
 function mapDispatchToProps(dispatch) {
-  return {
-    pageActions: bindActionCreators(pageActions, dispatch)
-  }
+    return {
+        pageActions: bindActionCreators(pageActions, dispatch),
+    }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)
