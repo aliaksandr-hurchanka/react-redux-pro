@@ -1,5 +1,8 @@
-# redux-ru-tutorial
-Код для [Настройка store](https://maxfarseer.gitbooks.io/redux-course-ru/content/sozdanie_store.html)
-
-Добавлено ```configureStore```
+# react-redux-pro
+    Start application:
+        1. npm install
+        2. node server
+        3. http://localhost:3000/
+        
+    
 # react-redux-pro
