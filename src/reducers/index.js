@@ -1,10 +1,7 @@
-import { combineReducers } from 'redux'
-import page from './page'
-import user from './user'
-import field from './field'
+const initialState = {
+  user: 'Unknown User'
+};
 
-export default combineReducers({
-    page,
-    user,
-    field
-})
+export default function userstate(state = initialState) {
+  return state;
+}
