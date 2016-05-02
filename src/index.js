@@ -1,14 +1,17 @@
 import React from 'react'
-import { render } from 'react-dom'
+import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
-import Navigation from './components/Navigation'
+import App from './components/App'
 import configureStore from './store/configureStore'
+//import reduser from './redusers'
 
 const store = configureStore()
 
-render(
+//let store = createStore(reduser)
+
+ReactDOM.render(
 	<Provider store={store}>
-		<Navigation />
+		<App />
 	</Provider>,
 	document.getElementById('root')
 )

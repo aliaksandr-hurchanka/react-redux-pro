@@ -1,18 +1,15 @@
 import React, { Component } from 'react'
 import Navigation from '../components/Navigation'
 
-export default class HomePage extends Component {
+export default class About extends Component {
 	constructor() {
 		super()
 	}
 
 	render() {
-
-		const { children } = this.props;
-
 		return ( <div>
 				<Navigation />
-				<div className='test'>{ children || 'Hello Home Page!' }</div>
+				<div className='test'>fsdjfl39r09238309830290923809809238023980938</div>
 			</div>
 		)
 	}

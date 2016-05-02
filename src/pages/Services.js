@@ -1,19 +1,18 @@
 import React, { Component } from 'react'
 import Navigation from '../components/Navigation'
 
-export default class HomePage extends Component {
+class Services extends Component {
 	constructor() {
 		super()
 	}
 
 	render() {
-
-		const { children } = this.props;
-
 		return ( <div>
 				<Navigation />
-				<div className='test'>{ children || 'Hello Home Page!' }</div>
+				<div className='test'>89765432</div>
 			</div>
 		)
 	}
 }
+
+export default Services
