@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Navigation from '../components/Navigation'
+import IndexDisplay from '../components/IndexDisplay'
 
 export default class HomePage extends Component {
 	constructor() {
@@ -12,7 +13,7 @@ export default class HomePage extends Component {
 
 		return ( <div>
 				<Navigation />
-				<div className='test'>{ children || 'Hello Home Page!' }</div>
+				<div className='test'>{ children || <IndexDisplay /> }</div>
 			</div>
 		)
 	}
