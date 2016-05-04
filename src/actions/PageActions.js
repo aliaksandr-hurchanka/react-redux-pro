@@ -1,20 +1,11 @@
 // This is action creator
 
-import { GET_PHOTOS_REQUEST, GET_PHOTOS_SUCCESS } from '../constants/Page'
+const uid = () => Math.random().toString(34).slice(2);
 
-export function getPhotos(year) {
-
-    return (dispatch) => {
-        dispatch({
-            type: GET_PHOTOS_REQUEST,
-            payload: year
-        })
-        
-        setTimeout(() => {
-            dispatch({
-                type: GET_PHOTOS_SUCCESS,
-                payload: [1,2,3,4,5]
-            })
-        }, 1000)
+export const addService = (text) => {
+    return {
+        type: 'ADD_SERVICE',
+        id: uid(),
+        text: text
     }
 }

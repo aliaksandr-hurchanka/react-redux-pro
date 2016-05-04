@@ -1,7 +1,8 @@
-const initialState = {
-  user: 'Unknown User'
-};
+import { combineReducers } from 'redux'
+import pageReducer from './pageReducer'
 
-export default function userstate(state = initialState) {
-  return state;
-}
+const appReducer = combineReducers({
+    pageReducer
+})
+
+export default appReducer
