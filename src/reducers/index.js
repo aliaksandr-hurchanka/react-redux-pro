@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
-import pageReducer from './pageReducer'
+import services from './services'    
+import visibilityFilter from './visibilityFilter'
 
 const appReducer = combineReducers({
-    pageReducer
+    services,
+    visibilityFilter
 })
 
 export default appReducer

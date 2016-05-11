@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-const ServicePanel = ({id, text}) => (
+const Service = ({ text }) => (
     <div className="col-md-3 col-sm-6">
-        <div className="panel panel-default text-center">
+        <div className="panel panel-default text-center service">
             <div className="panel-heading">
                 <span className="fa-stack fa-5x">
                     <i className="fa fa-circle fa-stack-2x text-primary"></i>
@@ -11,11 +11,12 @@ const ServicePanel = ({id, text}) => (
             </div>
             <div className="panel-body">
                 <h4>{ text }</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ID = { id }</p>
-                    <a href="#" className="btn btn-primary">Learn More</a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <button className="btn btn-primary">Learn More</button>
+                    <button className="btn btn-danger">Delete</button>
             </div>
         </div>
     </div>
 )
 
-export default ServicePanel
+export default Service
