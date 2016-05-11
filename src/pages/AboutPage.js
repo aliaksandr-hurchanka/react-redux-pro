@@ -17,9 +17,7 @@ export default class About extends Component {
 
         <div className="row">
             <div className="col-lg-12">
-                <h1 className="page-header">About
-                    <small>Subheading</small>
-                </h1>
+                <h1 className="page-header">About</h1>
                 <ol className="breadcrumb">
                     <li><a href="index.html">Home</a>
                     </li>

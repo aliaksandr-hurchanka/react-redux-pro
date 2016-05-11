@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
+import ModalWindow from '../components/ModalWindow'
 
 export default class IndexDisplay extends Component {
 
     constructor() {
         super()
-
-        this.state = {}
+        
+        this.state = {
+			showModal: false
+		}
     }
 
     render() {
@@ -119,7 +122,7 @@ export default class IndexDisplay extends Component {
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
                     </div>
                     <div className="col-md-4">
-                        <a className="btn btn-lg btn-default btn-block" href="#">Call to Action</a>
+                        <ModalWindow show={ this.state.showModal } />
                     </div>
                 </div>
             </div>
