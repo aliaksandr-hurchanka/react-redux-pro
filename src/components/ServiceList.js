@@ -1,11 +1,16 @@
 import React, { PropTypes } from 'react'
 import Service from './Service'
+import deleteServiceAction from '../actions/'
 
-const ServiceList = ({ services }) => (
+const ServiceList = ({ dispatch, services, onServiceDeleteClick }) => (
   <ul>
     {services.map(service =>
       <Service
-        key={service.id}
+        key={ service.id }
+        id={ service.id }
+        onServiceDeleteClick = { (id) => {
+            dispatch(deleteServiceAction(id))
+        }}
         {...service}
       />
     )}
@@ -13,3 +18,4 @@ const ServiceList = ({ services }) => (
 )
 
 export default ServiceList
+    

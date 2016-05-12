@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Service = ({ text }) => (
+const Service = ({ id, text, onServiceDeleteClick }) => (
     <div className="col-md-3 col-sm-6">
         <div className="panel panel-default text-center service">
             <div className="panel-heading">
@@ -13,7 +13,11 @@ const Service = ({ text }) => (
                 <h4>{ text }</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                     <button className="btn btn-primary">Learn More</button>
-                    <button className="btn btn-danger">Delete</button>
+                    <button 
+                        className="btn btn-danger"
+                        onClick={() => {
+                            onServiceDeleteClick(id)
+                        }}>Delete</button>
             </div>
         </div>
     </div>

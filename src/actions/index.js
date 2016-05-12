@@ -8,3 +8,10 @@ export const addService = (text) => {
         text
   }
 }
+
+export const deleteService = (id) => {
+    return {
+        type: 'DELETE_SERVICE',
+        id: id
+    }
+}
